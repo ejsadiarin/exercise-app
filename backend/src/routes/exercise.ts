@@ -10,7 +10,15 @@ router.get('/', (req, res) => {
 
 // Get specific exercise
 router.get('/:id', (req, res) => {
-  res.send(`Hey ${req.params.id}`);
+  console.log(`Query params: ${JSON.stringify(req.query)}`);
+  console.log(`Request Headers: ${JSON.stringify(req.headers)}`);
+  console.log(`Method: ${req.method}`);
+  res.status(202)
+    .header({
+      'X-Custom-Header': 'foo',
+      'X-Custom-Header-2': 'yesyesy'
+    })
+    .send(`Hey ${req.params.id}`)
 })
 
 // Add new exercise
