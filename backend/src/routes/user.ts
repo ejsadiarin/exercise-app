@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-const router = Router();
+export const router = Router();
 
 // Get specific user
 router.get('/:id', (req, res) => {
