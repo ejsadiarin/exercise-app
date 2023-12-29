@@ -1,2 +1,7 @@
 node_modules
 dist
+
+.env
+.env.dev
+.env.prod
+exrel-connect-db-planetscale.md
